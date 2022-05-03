@@ -7,7 +7,7 @@ import axiosInstance from '../../helpers/axiosInstance'
 function LandingComponent() {
   const initialValue = {sender:"", email:"", unit:{}, subject:"", message:"", "client_id":process.env.REACT_APP_CLIENT_ID} 
   const [formValues, setFormValues] = useState(initialValue)
-  const [units, setUnits] = useState([])
+  const [units, setUnits] = useState(["africa", "london","rome"])
 
   const {contactState:{addContact:{loading, data:{error, message}}}, contactDispatch} = useContext(GlobalContext)
 

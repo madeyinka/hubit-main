@@ -3,7 +3,7 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import AppRoutes from './routes'
 import HeaderCompnent from './components/Header';
 import { GlobalProvider } from './contexts/Provider'
-
+import "./App.css"
 function App() {
   return (
     <GlobalProvider>

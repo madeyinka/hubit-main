@@ -732,10 +732,10 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                                 <input type="email" required name="email" className="form-control" placeholder="Your email" onChange={handleChange} value={formValues.email} />
                             </div>
                             <div className="form-group mb-4 col-md-6">
-                                <label htmlFor=""><i className="eva eva-list-outline"></i></label>
-                                <select className="form-control" onChange={handleCategory}>
+                                {/* <label htmlFor=""><i className="eva eva-list-outline"></i></label> */}
+                                <select className="special-select" onChange={handleCategory}>
                                     {units.map((item, index) => (
-                                        <option key={index} value={item._id}>{item.name}</option>
+                                        <option key={index} value={item}>{item}</option>
                                     ))}
                                 </select>
                             </div>
