@@ -574,7 +574,8 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             </div>
                             <div className="form-group mb-4 col-md-6">
                                 <label htmlFor=""><i className="eva eva-list-outline"></i></label>
-                                <select className="form-control" onChange={handleCategory}>
+                                <select className="special-select" onChange={handleCategory}>
+                                    <option style={{"color":"#bbb"}}>Select Category</option>
                                     {units.map((item, index) => (
                                         <option key={index} value={item._id}>{item.name}</option>
                                     ))}
