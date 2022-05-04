@@ -1,6 +1,6 @@
 import React from 'react'
 
-function LandingLayout({handleChange, handleCategory, onSubmit, error, message, formValues, units, validateForm}) {
+function LandingLayout({handleChange, handleCategory, onSubmit, error, message, formValues, units, validateForm, services}) {
   return (
     <div className="main-content-wrap">
         <section id="intro-wrap" className="intro-nine-Wrap bg-primary text-left text-white">
@@ -105,181 +105,22 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             laborum,
                             ducimus, laboriosam sint dolorum aspernatur libero.</p>
                     </div>
-                    <div className="col-md-12">
-                        <div data-aos="fade-up" className="slick-services-carousel-two-wrap">
-                            <div className="service-wrap">
-                                <div className="card o-hidden mb-4">
-                                    <div className="card-header p-0 text-left">
-                                        <img className="img-responsive" src="../assets/images/landing/services/service1.svg" alt=""/>
-                                    </div>
-                                    <div className="card-body text-left">
-                                        <h3 className="card-title text-capitalize font-weight-bold">Service one</h3>
-                                        <p className="card-text">Adipisci quas repellat sed. Quasi quaerat aut
-                                            nam
-                                            possimus vitae dignissimos, sapiente est atque tenetur</p>
-                                        {/* <a href="#" className="text-primary text-capitalize font-weight-medium"> <span>Read More</span> </a>  */}
-                                    </div>
-                                    {/* <div className="card-footer pl-3 text-left">
-                                        <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                            <span className="eva eva-link-2-outline"></span>
-                                        </a>
-                                        <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                            <span className="eva eva-share"></span>
-                                        </a>
-                                    </div> */}
-                                </div>
-                            </div>
-                            <div className="service-wrap">
-                                <div className="card o-hidden mb-4">
-                                    <div className="card-header p-0 text-left">
-                                        <img className="img-responsive" src="../assets/images/landing/services/services14.svg" alt="" />
-                                    </div>
-                                    <div className="card-body text-left">
-                                        <h3 className="card-title text-capitalize font-weight-bold">Service two</h3>
-                                        <p className="card-text">Adipisci quas repellat sed. Quasi quaerat aut
-                                            nam
-                                            possimus vitae dignissimos, sapiente est atque tenetur</p>
-                                        {/* <a href="#" class="text-primary text-capitalize font-weight-medium"> <span>Read More</span> </a>  */}
-                                    </div>
-                                    {/* <div className="card-footer pl-3 text-left">
-                                        <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark"><span className="eva eva-link-2-outline"></span></a>
-                                        <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark"><span className="eva eva-share"></span></a>
-                                    </div> */}
-                                </div>
-                            </div>
-                            <div className="service-wrap">
-                                <div className="card o-hidden mb-4">
-                                    <div className="card-header p-0 text-left">
-                                        <img className="img-responsive" src="../assets/images/landing/services/services15.svg" alt=""/>
-                                    </div>
-                                    <div className="card-body text-left">
-                                        <h3 className="card-title text-capitalize font-weight-bold">Service three</h3>
-                                        <p className="card-text">Adipisci quas repellat sed. Quasi quaerat aut nam possimus vitae dignissimos, sapiente est atque tenetur</p>
-                                        {/* <a href="#" class="text-primary text-capitalize font-weight-medium"> <span>Read More</span> </a> */}
-                                    </div>
-                                    {/* <div className="card-footer pl-3 text-left">
-                                        <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark"><span className="eva eva-link-2-outline"></span></a>
-                                        <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark"><span className="eva eva-share"></span></a>
-                                    </div> */}
-                                </div>
-                            </div>
-                                        <div className="service-wrap">
-                                            <div className="card o-hidden mb-4">
-                                                <div className="card-header p-0 text-left">
-                                                    <img className="img-responsive" src="../assets/images/landing/services/services16.svg" alt=""/>
-                                                </div>
-                                                <div className="card-body text-left">
-                                                    <h3 className="card-title text-capitalize font-weight-bold">Service four</h3>
-                                                    <p className="card-text">Adipisci quas repellat sed. Quasi quaerat aut nam
-                                                        possimus vitae dignissimos, sapiente est atque tenetur</p>
-                                                    {/* <a href="#" className="text-primary text-capitalize font-weight-medium"> <span>Read More</span> </a>  */}
-                                                </div>
-                                                {/* <div className="card-footer pl-3 text-left">
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-link-2-outline"></span>
-                                                    </a>
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-share"></span>
-                                                    </a>
-                                                </div> */}
-                                            </div>
+                            {services.map(item => (
+                               <div className="col-md-6 col-lg-4 mt-4 mb-4">
+                                   <div className="card service-three--hover o-hidden">
+                                        <div className="card-header p-0">
+                                            <img className="img-fluid" src={item.image} alt="" />
                                         </div>
-                                        <div className="service-wrap">
-                                            <div className="card o-hidden mb-4">
-                                                <div className="card-header p-0 text-left">
-                                                    <img className="img-responsive" src="../assets/images/landing/services/services9.svg" alt=""/>
-                                                </div>
-                                                <div className="card-body text-left">
-                                                    <h3 className="card-title text-capitalize font-weight-bold">Service five</h3>
-                                                    <p className="card-text">Adipisci quas repellat sed. Quasi quaerat aut nam
-                                                        possimus vitae dignissimos, sapiente est atque tenetur</p>
-                                                     {/* <a href="#" className="text-primary text-capitalize font-weight-medium"> <span>Read More</span> </a> */}
-                                                </div>
-                                                {/* <div className="card-footer pl-3 text-left">
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-link-2-outline"></span>
-                                                    </a>
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-share"></span>
-                                                    </a>
-                                                </div> */}
-                                            </div>
+                                        <div className="card-body">
+                                            <h5 className="card-title font-weight-bold">{item.name}</h5>
+                                            <p className="card-text" dangerouslySetInnerHTML={{__html:item.description}}></p>
                                         </div>
-                                        <div className="service-wrap">
-                                            <div className="card o-hidden mb-4">
-                                                <div className="card-header p-0 text-left">
-                                                    <img className="img-responsive" src="../assets/images/landing/services/services6.svg" alt="" />
-                                                </div>
-                                                <div className="card-body text-left">
-                                                    <h3 className="card-title text-capitalize font-weight-bold">Service six</h3>
-                                                    <p className="card-text">Adipisci quas repellat sed. Quasi quaerat aut nam
-                                                        possimus vitae dignissimos, sapiente est atque tenetur</p>
-                                                    {/* <a href="#" class="text-primary text-capitalize font-weight-medium"> <span>Read More</span> </a>  */}
-                                                </div>
-                                                {/* <div className="card-footer pl-3 text-left">
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-link-2-outline"></span>
-                                                    </a>
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-share"></span>
-                                                    </a>
-                                                </div> */}
-                                            </div>
-                                        </div>
-                                        <div className="service-wrap">
-                                            <div className="card o-hidden mb-4">
-                                                <div className="card-header p-0 text-left">
-                                                    <img className="img-responsive" src="../assets/images/landing/services/services10.svg" alt="" />
-                                                </div>
-                                                <div className="card-body text-left">
-                                                    <h3 className="card-title text-capitalize font-weight-bold">Service seven </h3>
-                                                    <p className="card-text">Adipisci quas repellat sed. Quasi quaerat aut
-                                                        nam
-                                                        possimus vitae dignissimos, sapiente est atque tenetur</p>
-                                                     {/* <a href="#" className="text-primary text-capitalize font-weight-medium"> <span>Read More</span> </a>  */}
-                                                </div>
-                                                {/* <div className="card-footer pl-3 text-left">
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-link-2-outline"></span>
-                                                    </a>
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-share"></span>
-                                                    </a>
-                                                </div> */}
-                                            </div>
-                                        </div>
-                                        <div className="service-wrap">
-                                            <div className="card o-hidden mb-4">
-                                                <div className="card-header p-0 text-left">
-                                                    <img className="img-responsive" src="../assets/images/landing/services/services5.svg" alt=""/>
-                                                </div>
-                                                <div className="card-body text-left">
-                                                    <h3 className="card-title text-capitalize font-weight-bold">Service
-                                                        eight
-                                                    </h3>
-                                                    <p className="card-text">Adipisci quas repellat sed. Quasi quaerat aut
-                                                        nam
-                                                        possimus vitae dignissimos, sapiente est atque tenetur</p>
-                                                     {/* <a href="#" class="text-primary text-capitalize font-weight-medium"> <span>Read More</span> </a>  */}
-                                                </div>
-                                                {/* <div className="card-footer pl-3 text-left">
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-link-2-outline"></span>
-                                                    </a>
-                                                    <a href="landing.v2.html#" className="btn btn-lg p-1 mr-1 text-dark">
-                                                        <span className="eva eva-share"></span>
-                                                    </a>
-                                                </div> */}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slick_control_wrap text-center">
-                                        <button data-aos="fade-right" type="button" className="ngu_control_button half-button services-arrow-left leftRs btn btn-circle btn-white btn-shadow"><i className="eva eva-chevron-left-outline"></i></button>
-                                        <button data-aos="fade-left" type="button" className="ngu_control_button half-button services-arrow-right rightRs btn btn-circle btn-white btn-shadow"><i className="eva eva-chevron-right-outline"></i></button>
-                                    </div>
-                                </div>
-                            </div>
+                                   </div>
+                               </div>
+                            ))}
+                        </div>
                     </div>
+               
         </section>
 
         <section id="works-wrap" className="work1Wrap">
