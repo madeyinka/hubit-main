@@ -7,26 +7,22 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 intro-nine-LeftSection pb-3">
-                        <h1 className="font-weight-bold text-white text-42 mb-3 t-shadow">Design and Sell Your
-                            Dream Product</h1>
-                        <p className="text-20 mb-4">Meet Dexam Highly customizable Pure VueJs + Bootstrap 4
-                            Landing
-                            Pages. </p>
+                        <h1 className="font-weight-bold text-white text-42 mb-3 t-shadow">Let's Start And Grow Your Business Together.</h1>
+                        <p className="text-20 mb-4">Our platform enhances your business by utilizing digital data for higher reattribution and retention.</p>
                         <div className="mb-5 lead">
                             <ul className="list-inline">
-                                <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>Minimal,
-                                    Intuitive and Fully Responsive Design
+                                <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>Customized User Friendly And Responsive Design.
                                 </li>
                                 <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>
-                                    Authentication Pages
+                                    Data Analytics And Reporting
                                 </li>
                                 <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>
-                                    Super Flexible And Customizable</li>
+                                    Digital Marketing And Promotions</li>
                             </ul>
                         </div>
                         <div className="intro-nine-Buttons">
-                            <a href="/sessions/signin" className="btn half-button btn-outline-white btn-lg pl-5 pr-5 pb-2 mr-2 mb-4 text-uppercase" role="button">Sign in</a>
-                            <button className="btn half-button btn-warning btn-lg pl-5 pr-5 pb-2 mb-4 text-uppercase" data-toggle="modal" data-target="#exampleModalLong">Sign up</button>
+                            <a href="https://bizone.vercel.app/auth/login" className="btn half-button btn-outline-white btn-lg pl-5 pr-5 pb-2 mr-2 mb-4 text-uppercase" role="button">Sign In</a>
+                            <a href="#pricing-wrap" className="scroll-to btn half-button btn-warning btn-lg pl-5 pr-5 pb-2 mb-4 text-uppercase" role="button">Pricing</a>
                         </div>
                     </div>
                     <div className="col-md-5 offset-md-1 intro-nine-RightSection d-flex align-items-center">
@@ -43,10 +39,8 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 section-header mb-5">
-                        <h2 className="font-weight-bold">Our Exciting Features</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat ea quam
-                            laborum,
-                            ducimus, laboriosam sint dolorum aspernatur libero.</p>
+                        <h2 className="font-weight-bold">Features</h2>
+                        <p>Some exquisite features that improve interactivity and website optimisation. Here are a few:</p>
                     </div>
 
                     <div className="col-md-12 col-lg-6 col-sm-12 mb-4 mb-lg-0">
@@ -54,36 +48,36 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             <div data-aos="fade-right" className="col-md-6 col-sm-6 mb-4">
                                 <div className="card">
                                     <div className="card-body pt-4 pb-4 text-center">
-                                        <i className="eva eva-clock-outline text-36"></i>
-                                        <h4 className="card-title pt-2 font-weight-medium">Time Tracking</h4>
-                                        <p>Lorem Ipsum is simply dummy text of the printing .</p>
+                                        <i className="eva eva-options-2-outline text-36"></i>
+                                        <h4 className="card-title pt-2 font-weight-medium">SEO</h4>
+                                        <p>Expand your reach with the right keywords.</p>
                                     </div>
                                 </div>
                             </div>
                             <div data-aos="fade-left" className="col-md-6 col-sm-6 mb-4">
                                 <div className="card">
                                     <div className="card-body pt-4 pb-4 text-center">
-                                        <i className="eva eva-shopping-bag-outline text-36"></i>
-                                        <h4 className="card-title pt-2 font-weight-medium">Sales Report</h4>
-                                        <p>Lorem Ipsum is simply dummy text of the printing .</p>
+                                        <i className="eva eva-activity-outline text-36"></i>
+                                        <h4 className="card-title pt-2 font-weight-medium">Analytics</h4>
+                                        <p>Metrics that help you take informed decisions.</p>
                                     </div>
                                 </div>
                             </div>
                             <div data-aos="fade-up" className="col-md-6 col-sm-6 mb-4 mb-lg-0 mb-md-0">
                                 <div className="card">
                                     <div className="card-body pt-4 pb-4 text-center">
-                                        <i className="eva eva-lock-outline text-36"></i>
-                                        <h4 className="card-title pt-2 font-weight-medium">Data Safety</h4>
-                                        <p>Lorem Ipsum is simply dummy text of the printing .</p>
+                                        <i className="eva eva-email-outline text-36"></i>
+                                        <h4 className="card-title pt-2 font-weight-medium">Newsletter</h4>
+                                        <p>Increased engagement leads to increased conversion.</p>
                                     </div>
                                 </div>
                             </div>
                             <div data-aos="fade-up" className="col-md-6 col-sm-6 mb-4 mb-lg-0 mb-md-0">
                                 <div className="card">
                                     <div className="card-body pt-4 pb-4 text-center">
-                                        <i className="eva eva-people-outline text-36"></i>
-                                        <h4 className="card-title pt-2 font-weight-medium">Contracts</h4>
-                                        <p>Lorem Ipsum is simply dummy text of the printing .</p>
+                                        <i className="eva eva-smartphone-outline text-36"></i>
+                                        <h4 className="card-title pt-2 font-weight-medium">Responsive</h4>
+                                        <p>Well adapted for user's convenience across devices.</p>
                                     </div>
                                 </div>
                             </div>
@@ -101,12 +95,10 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                 <div className="row">
                     <div className="col-md-12 section-header mb-5">
                         <h2 className="font-weight-bold">Our Services</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat ea quam
-                            laborum,
-                            ducimus, laboriosam sint dolorum aspernatur libero.</p>
+                        <p>We offer a range of digital services all tailored  to meet your brand objectives.</p>
                     </div>
-                            {services.map(item => (
-                               <div className="col-md-6 col-lg-4 mt-4 mb-4">
+                            {services.map((item, index) => (
+                               <div className="col-md-6 col-lg-4 mt-4 mb-4" key={index}>
                                    <div className="card service-three--hover o-hidden">
                                         <div className="card-header p-0">
                                             <img className="img-fluid" src={item.image} alt="" />
@@ -128,9 +120,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                 <div className="row">
                     <div className="section-header col-md-12 mb-5">
                         <h2 className="font-weight-bold"> Recent Works</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat ea quam
-                            laborum,
-                            ducimus, laboriosam sint dolorum aspernatur libero.</p>
+                        <p>Check out some of our recent projects.</p>
                     </div>
                     <div data-aos="fade-up" className="col-md-6 col-lg-4 col-sm-6 mb-4">
                         <div className="card o-hidden">
@@ -243,9 +233,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                 <div className="row">
                     <div className="col-md-12 section-header mb-5">
                         <h2 className="font-weight-bold">Why Choose Us </h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat ea quam
-                            laborum,
-                            ducimus, laboriosam sint dolorum aspernatur libero.</p>
+                        <p>Our unique powerful CMS is built to collect and analyse user data thereby creating an ecosystem based on customer behaviour.</p>
                     </div>
                     <div className="col-md-6 col-sm-12 mb-5 mb-lg-0 mb-md-0 mt-mb-5">
                         <div className="left-image-carousel">
@@ -269,37 +257,24 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             <div data-aos="fade-left" className="col-md-12 col-sm-6 mb-4">
                                 <div className="card">
                                     <div className="card-body pt-3 pb-3">
-                                        <h4 className="card-title font-weight-bold">Sales and Marketing
-                                            Alignment
-                                        </h4>
-                                        <p className="m-0">Contrary to popular belief, Lorem Ipsum is not simply
-                                            random text. It has roots in a piece of classical Latin
-                                            literature
-                                            from 45 BC</p>
+                                        <h4 className="card-title font-weight-bold">Unique design and interactive Interface</h4>
+                                        <p className="m-0">Giving your brand the perfect outlook it deserves. Modelled by our expert team of designers based on products and services offered.</p>
                                     </div>
                                 </div>
                             </div>
                             <div data-aos="fade-right" className="col-md-12 col-sm-6 mb-4">
                                 <div className="card">
                                     <div className="card-body pt-3 pb-3">
-                                        <h4 className="card-title font-weight-bold">Relationship-based
-                                            Engagement
-                                        </h4>
-                                        <p className="m-0">Contrary to popular belief, Lorem Ipsum is not simply
-                                            random text. It has roots in a piece of classical Latin
-                                            literature
-                                            from 45 BC</p>
+                                        <h4 className="card-title font-weight-bold">Social Media Integration</h4>
+                                        <p className="m-0">By leveraging on marketing endpoints provided by social media giants, our CMS allows automated publications to social channels and cross-trafficking of audience.</p>
                                     </div>
                                 </div>
                             </div>
                             <div data-aos="fade-up" className="col-md-12 col-sm-6 mb-lg-0 mb-md-0 mb-sm-0">
                                 <div className="card">
                                     <div className="card-body pt-3 pb-3">
-                                        <h4 className="card-title font-weight-bold">Transparent Pricing</h4>
-                                        <p className="m-0">Contrary to popular belief, Lorem Ipsum is not simply
-                                            random text. It has roots in a piece of classical Latin
-                                            literature
-                                            from 45 BC</p>
+                                        <h4 className="card-title font-weight-bold">Data Protection and Security</h4>
+                                        <p className="m-0">Protecting data generated from our publishing channels  has been adequately provisioned. </p>
                                     </div>
                                 </div>
                             </div>
@@ -324,8 +299,8 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                     <div data-aos="fade-right" data-aos-duration="1800" data-aos-delay="50" className="col-md-6 col-lg-4 mb-4 mb-lg-0 mt-3">
                         <div className="card service-three--hover">
                             <div className="card-body">
-                                <p className="text-12 font-weight-700 text-muted mt-3">Personal</p>
-                                <h2 className="display-3 font-weight-bold mt-4">$5</h2>
+                                <p className="text-12 font-weight-700 text-muted mt-3">Basic</p>
+                                <h2 className="display-3 font-weight-bold mt-4"><span style={{fontSize:"1.5rem", color:"#332e38"}}>₦</span>150</h2>
                                 <p className="text-muted mt-4">3 Projects</p>
                                 <p className="text-mute"><strike>1 Initial Concept Included</strike></p>
                                 <p className="text-mute"><strike>Logo Transparency</strike></p>
@@ -337,8 +312,8 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                     <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="col-md-6 col-lg-4 mb-4 mb-lg-0 mt-3">
                         <div className="card service-three--hover">
                             <div className="card-body">
-                                <p className="text-12 font-weight-700 mt-3">Team</p>
-                                <h2 className="display-3 text-success font-weight-bold mt-4">$50</h2>
+                                <p className="text-12 font-weight-700 mt-3">Standard</p>
+                                <h2 className="display-3 text-success font-weight-bold mt-4"><span style={{fontSize:"1.5rem"}}>₦</span>50</h2>
                                 <p className="text-muted mt-4">3 Projects</p>
                                 <p className="text-muted">1 Initial Concept Included</p>
                                 <p className="text-mute"><strike>Logo Transparency</strike></p>
@@ -350,8 +325,8 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                     <div data-aos="fade-left" data-aos-duration="2200" data-aos-delay="150" className="col-md-6 col-lg-4 mb-4 mb-lg-0 mt-3">
                         <div className="card service-three--hover">
                             <div className="card-body">
-                                <p className="text-12 font-weight-700 text-muted mt-3">Business</p>
-                                <h2 className="display-3 font-weight-bold mt-4">$80</h2>
+                                <p className="text-12 font-weight-700 text-muted mt-3">Custom</p>
+                                <h2 className="display-3 font-weight-bold mt-4">N/A</h2>
                                 <p className="text-muted mt-4">3 Projects</p>
                                 <p className="text-muted">1 Initial Concept Included</p>
                                 <p className="text-muted">Logo Transparency</p>
@@ -486,21 +461,19 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                     <div className="col-md-6 col-sm-12 mb-4 mb-lg-0 mb-md-0 mb-4">
                         <div className="section-header mb-5">
                             <h2 className="font-weight-bold">Faqs</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat ea quam
-                                            laborum, ducimus, laboriosam sint dolorum aspernatur libero.</p>
+                            <p>Frequently asked questions.</p>
                         </div>
                         <div className="accordion" id="accordionExample">
                             <div className="card ul-card__border-radius">
                                 <div className="card-header">
                                     <h6 className="card-title mb-0">
-                                        <a data-toggle="collapse" className="text-default" href="#accordion-item-group1">Accordion Item #1</a>
+                                        <a data-toggle="collapse" className="text-default" href="#accordion-item-group1">How long will it take to develop and launch my website?</a>
                                     </h6>
                                 </div>
                                 <div id="accordion-item-group1" className="collapse show" data-parent="#accordionExample">
                                     <div className="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                        terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                        skateboard dolor brunch.
+                                        It will take 2 weeks (14 working days) after design is approved by client. This timeline applies to basic plan.
+                                        However, Standard custom plan may take longer time. In this case, The timeline will be communicated with the client.
                                     </div>
                                 </div>
                             </div>
@@ -508,16 +481,14 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             <div className="card ul-card__border-radius">
                                 <div className="card-header">
                                     <h6 className="card-title mb-0">
-                                        <a className="collapsed text-default" data-toggle="collapse" href="#accordion-item-group2">Accordion Item #2</a>
+                                        <a className="collapsed text-default" data-toggle="collapse" href="#accordion-item-group2">What do I have to provide?</a>
                                     </h6>
                                 </div>
 
                                 <div id="accordion-item-group2" className="collapse" data-parent="#accordionExample">
                                     <div className="card-body">
-                                        on cupidatat skateboard dolor brunch. esciunt laborum eiusmod.
-                                        Brunch
-                                        3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                                        coffee nulla assumenda.
+                                        An agent will provide a form where you will required to provide information about your business. 
+                                        This will be translated to design. Your approval will be sort before the implemenation commences.
                                     </div>
                                 </div>
                             </div>
@@ -525,17 +496,13 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             <div className="card ul-card__border-radius">
                                 <div className="card-header">
                                     <h6 className="card-title mb-0">
-                                        <a className="collapsed text-default" data-toggle="collapse" href="#accordion-item-default3">Accordion Item #3</a>
+                                        <a className="collapsed text-default" data-toggle="collapse" href="#accordion-item-default3">Will I be able to make changes to my website?</a>
                                     </h6>
                                 </div>
 
                                 <div id="accordion-item-default3" className="collapse" data-parent="#accordionExample">
                                     <div className="card-body">
-                                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                        Food
-                                        truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                        sunt
-                                        aliqua put a bird on it.
+                                        Yes. Our CMS provides for changing both static and dynamic contents on your webiste. We will however support you should you require technical support.
                                     </div>
                                 </div>
                             </div>
@@ -554,15 +521,20 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                     <div data-aos="fade-right" className="form-wrap col-md-6 mb-4">
                         <div className="section-header mb-5">
                             <h2 className="font-weight-bold">Get in Touch With Us !</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat ea quam
-                                laborum, ducimus, laboriosam sint dolorum aspernatur libero</p>
+                            <p>We'd love to hear from you.</p>
                         </div>
                         {error === false && <div  className="alert alert-success alert-dismissible fade show" role="alert">
-                            <button type="button" className="close">
+                            <button type="button" className="close" onClick={error = true}>
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <strong>{message}</strong>
                         </div>}
+                        {/* {error === false && <div  className="alert alert-success alert-dismissible fade show" role="alert">
+                            <button type="button" className="close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong>{message}</strong>
+                        </div>} */}
                         <form className="row form">
                             <div className="form-group mb-4 col-md-6">
                                 <label htmlFor=""><i className="eva eva-person-outline"></i></label>
@@ -575,7 +547,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             <div className="form-group mb-4 col-md-6">
                                 <label htmlFor=""><i className="eva eva-list-outline"></i></label>
                                 <select className="special-select" onChange={handleCategory}>
-                                    <option style={{"color":"#bbb"}}>Select Category</option>
+                                    <option style={{"color":"#bbb", "opacity":"1"}}>Department</option>
                                     {units.map((item, index) => (
                                         <option key={index} value={item._id}>{item.name}</option>
                                     ))}
@@ -611,7 +583,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             <div className="card">
                                 <div className="card-body">
                                     <div className="subscribe-1__start mt-5 mb-5">
-                                        <h2 className="heading mb-5">Subscribe to Our Channel</h2>
+                                        <h2 className="heading mb-5">Join Our Mailing List</h2>
                                         <div className="subscribe-input">
                                             <form className="form-inline justify-content-center">
                                                 <div className="form-group">

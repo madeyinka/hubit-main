@@ -9,6 +9,7 @@ function LandingComponent() {
   const [formValues, setFormValues] = useState(initialValue)
   const [units, setUnits] = useState([])
   const [services, setServices] = useState([])
+  const [status, setStatus] = useState(null)
 
   const {contactState:{addContact:{loading, data:{error, message}}}, contactDispatch} = useContext(GlobalContext)
 
@@ -48,10 +49,11 @@ function LandingComponent() {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    submit(formValues)(contactDispatch)   
+    submit(formValues)(contactDispatch)
     setFormValues(initialValue)
+    console.log(error)
   }
-
+  
   return (
     <LandingLayout 
       handleChange={handleChange}

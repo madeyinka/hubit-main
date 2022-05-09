@@ -40,9 +40,9 @@ function HeaderCompnent() {
                             <li className="nav-item">
                                 <a className="scroll-to nav-link m-2" href="#contacts-wrap">Contact Us</a>
                             </li>   
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a href="https://bizone.vercel.app/auth/login" className="btn btn-outline-white btn pl-3 pr-3 pb-2 ml-4 mt-2" role="button">Sign In</a>
-                            </li>                        
+                            </li>                         */}
                         </ul>
                         
                     </div>
