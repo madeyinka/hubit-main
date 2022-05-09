@@ -300,11 +300,19 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                         <div className="card service-three--hover">
                             <div className="card-body">
                                 <p className="text-12 font-weight-700 text-muted mt-3">Basic</p>
-                                <h2 className="display-3 font-weight-bold mt-4"><span style={{fontSize:"1.5rem", color:"#332e38"}}>₦</span>150</h2>
-                                <p className="text-muted mt-4">3 Projects</p>
-                                <p className="text-mute"><strike>1 Initial Concept Included</strike></p>
-                                <p className="text-mute"><strike>Logo Transparency</strike></p>
-                                <p className="text-muted">High Resolution</p>
+                                <h2 className="display-3 font-weight-bold mt-4" style={{fontSize:"2.5rem"}}><span style={{fontSize:"1.5rem", color:"#332e38"}}>₦</span>150,000</h2>
+                                <p className="text-muted mt-4">Custom Design</p>
+                                <p className="text-muted">Blog Management</p>
+                                <p className="text-muted">Newsletter Subscription</p>
+                                <p className="text-muted">Maximum of 10 pages</p>
+                                <p className="text-muted">Content Management System</p>
+                                <p className="text-muted">.com / .com.ng domain (1yr)</p>
+                                <p className="text-muted">Cloud hosting service (1yr)</p>
+                                <p className="text-muted">Chat Enabled</p>
+                                <p className="text-muted">Social Integration</p>
+                                <p className="text-muted"><strike>Payment Integration</strike></p>
+                                <p className="text-muted"><strike>Commerce Management</strike></p>
+                                <p className="text-muted"><strike>Custom Features</strike></p>
                                 <button className="btn btn-outline-info mt-4 mb-4">CHOOSE THE PLAN</button>
                             </div>
                         </div>
@@ -313,11 +321,19 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                         <div className="card service-three--hover">
                             <div className="card-body">
                                 <p className="text-12 font-weight-700 mt-3">Standard</p>
-                                <h2 className="display-3 text-success font-weight-bold mt-4"><span style={{fontSize:"1.5rem"}}>₦</span>50</h2>
-                                <p className="text-muted mt-4">3 Projects</p>
-                                <p className="text-muted">1 Initial Concept Included</p>
-                                <p className="text-mute"><strike>Logo Transparency</strike></p>
-                                <p className="text-muted">High Resolution</p>
+                                <h2 className="display-3 text-success font-weight-bold mt-4" style={{fontSize:"2.5rem"}}><span style={{fontSize:"1.5rem"}}>₦</span>300,000</h2>
+                                <p className="text-muted mt-4">Custom Design</p>
+                                <p className="text-muted">Blog Management</p>
+                                <p className="text-muted">Newsletter Subscription</p>
+                                <p className="text-muted">More than 10 pages</p>
+                                <p className="text-muted">Content Management System</p>
+                                <p className="text-muted">.com / .com.ng domain (1yr)</p>
+                                <p className="text-muted">Cloud hosting service (1yr)</p>
+                                <p className="text-muted">Chat Enabled</p>
+                                <p className="text-muted">Social Integration</p>
+                                <p className="text-muted">Payment Integration</p>
+                                <p className="text-muted">Commerce Management</p>
+                                <p className="text-muted"><strike>Custom Features</strike></p>
                                 <button className="btn btn-outline-success mt-4 mb-4">CHOOSE THE PLAN</button>
                             </div>
                         </div>
@@ -326,11 +342,19 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                         <div className="card service-three--hover">
                             <div className="card-body">
                                 <p className="text-12 font-weight-700 text-muted mt-3">Custom</p>
-                                <h2 className="display-3 font-weight-bold mt-4">N/A</h2>
-                                <p className="text-muted mt-4">3 Projects</p>
-                                <p className="text-muted">1 Initial Concept Included</p>
-                                <p className="text-muted">Logo Transparency</p>
-                                <p className="text-muted">High Resolution</p>
+                                <h2 className="display-3 font-weight-bold mt-4" style={{fontSize:"2.5rem"}}>TBD</h2>
+                                <p className="text-muted mt-4">Custom Design</p>
+                                <p className="text-muted">Blog Management</p>
+                                <p className="text-muted">Newsletter Subscription</p>
+                                <p className="text-muted">More than 10 pages</p>
+                                <p className="text-muted">Content Management System</p>
+                                <p className="text-muted">.com / .com.ng domain (1yr)</p>
+                                <p className="text-muted">Cloud hosting service (1yr)</p>
+                                <p className="text-muted">Chat Enabled</p>
+                                <p className="text-muted">Social Integration</p>
+                                <p className="text-muted">Payment Integration</p>
+                                <p className="text-muted">Commerce Management</p>
+                                <p className="text-muted">Custom Features</p>
                                 <button className="btn btn-outline-info mt-4 mb-4">CHOOSE THE PLAN</button>
                             </div>
                         </div>
