@@ -1,7 +1,11 @@
 import React from 'react'
 
-function LandingLayout({handleChange, handleCategory, onSubmit, error, message, formValues, units, validateForm, services}) {
-  return (
+function LandingLayout({handleChange, handleCategory, onSubmit, status, message, error, formValues, units, validateForm, services, contactBtn,
+                        email, setEmail, validEmail, setEmailFocus, emailFocus, handlePriceForm, pwd, pwd2, setPwd, setPwd2, validPwd, 
+                        validPwd2, pwdFocus, setPwdFocus, pwd2Focus, setPwd2Focus, plan, setPlan, phone, setPhone, validPhone, phoneFocus, 
+                        setPhoneFocus, validFname, validLname, firstname, setFirstname, lastname, setLastname, fnameFocus, setFnameFocus, 
+                        lnameFocus, setLnameFocus, company, setCompany, validComp, setCompFocus, compFocus, success, err, msg, priceBtn}) {
+  return ( 
     <div className="main-content-wrap">
         <section id="intro-wrap" className="intro-nine-Wrap bg-primary text-left text-white">
             <div className="container">
@@ -313,7 +317,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                                 <p className="text-muted"><strike>Payment Integration</strike></p>
                                 <p className="text-muted"><strike>Commerce Management</strike></p>
                                 <p className="text-muted"><strike>Custom Features</strike></p>
-                                <button className="btn btn-outline-info mt-4 mb-4">CHOOSE THE PLAN</button>
+                                <button className="btn btn-outline-info mt-4 mb-4" onClick={() => setPlan('Basic')} data-toggle="modal" data-target="#pricingForm">CHOOSE THE PLAN</button>
                             </div>
                         </div>
                     </div>
@@ -334,7 +338,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                                 <p className="text-muted">Payment Integration</p>
                                 <p className="text-muted">Commerce Management</p>
                                 <p className="text-muted"><strike>Custom Features</strike></p>
-                                <button className="btn btn-outline-success mt-4 mb-4">CHOOSE THE PLAN</button>
+                                <button className="btn btn-outline-success mt-4 mb-4" onClick={() => setPlan('Standard')} data-toggle="modal" data-target="#pricingForm">CHOOSE THE PLAN</button>
                             </div>
                         </div>
                     </div>
@@ -355,7 +359,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                                 <p className="text-muted">Payment Integration</p>
                                 <p className="text-muted">Commerce Management</p>
                                 <p className="text-muted">Custom Features</p>
-                                <button className="btn btn-outline-info mt-4 mb-4">CHOOSE THE PLAN</button>
+                                <button className="btn btn-outline-info mt-4 mb-4" onClick={() => setPlan('Custom')} data-toggle="modal" data-target="#pricingForm">CHOOSE THE PLAN</button>
                             </div>
                         </div>
                     </div>
@@ -547,18 +551,16 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                             <h2 className="font-weight-bold">Get in Touch With Us !</h2>
                             <p>We'd love to hear from you.</p>
                         </div>
-                        {error === false && <div  className="alert alert-success alert-dismissible fade show" role="alert">
-                            <button type="button" className="close" onClick={error = true}>
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <strong>{message}</strong>
-                        </div>}
-                        {/* {error === false && <div  className="alert alert-success alert-dismissible fade show" role="alert">
-                            <button type="button" className="close">
+                        {/* {status === false && <div  className="alert alert-success alert-dismissible fade show" role="alert">
+                            <button type="button" className="close" onClick={alertClose}>
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <strong>{message}</strong>
                         </div>} */}
+                        { (status || error) && <div className={status ? "alert alert-success" : "alert alert-danger"} role="alert">{message}
+                            <button className="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>}
+                        
                         <form className="row form">
                             <div className="form-group mb-4 col-md-6">
                                 <label htmlFor=""><i className="eva eva-person-outline"></i></label>
@@ -586,7 +588,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                                 <textarea className="form-control" placeholder="Your message here" required name="message" rows="5" onChange={handleChange} value={formValues.message}></textarea>
                             </div>
                             <div className="form-group col-md-12">
-                                <button type="submit" disabled={validateForm} className="btn btn-block half-button form-submit-button btn-large btn-gradient" onClick={onSubmit}>Send message</button>
+                                <button type="submit" disabled={validateForm} className="btn btn-block half-button form-submit-button btn-large btn-gradient" onClick={onSubmit}>{contactBtn}</button>
                             </div>
                         </form>
                     </div>
@@ -631,63 +633,62 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                     <div data-aos="fade-up" className="col-md-3 mb-4">
                         <div className="o-hidden text-left">
                             <div className="">
-                                <h4 className="card-title font-weight-bold">Dexam</h4>
-                                <p className="">Dexam is highly customizable Pure VueJs + bootstrap 4 landing
-                                    Page.
-                                    Dexam is built with official @vue/cli tool and uses BootstrapVue .
+                                <h4 className="card-title font-weight-bold">About</h4>
+                                <p className="">HubIT CMS is a data aggregator that is designed to enhance business growth
+                                through data analytics and information mapping. Designed to utilize data to the fullest potential.
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" className="col-md-3 mb-4">
-                        <div className="o-hidden text-left">
-                            <div className="">
-                                <h4 className="card-title font-weight-bold">Other Pages</h4>
-                                <div className="mb-5 lead">
-                                    <ul className="list-inline">
-                                        <li className="mb-3"> <a href="landing.v2.html#">Marketing</a></li>
-                                        <li className="mb-3"><a href="landing.v2.html#">Campaign</a>
-                                        </li>
-                                        <li className="mb-3"> <a href="landing.v2.html#"> Digital Agency</a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div data-aos="fade-up" className="col-md-3 mb-4 mb-lg-0 mb-md-0">
                         <div className="o-hidden text-left">
                             <div className="">
-                                <h4 className="card-title font-weight-bold">Awesome Features</h4>
+                                <h4 className="card-title font-weight-bold">Features</h4>
                                 <div className="mb-5 lead">
                                     <ul className="list-inline">
-                                        <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>Minimal
+                                        <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>Newsletter
                                         </li>
-                                        <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>Intuitive
+                                        <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>Campaigns
                                         </li>
-                                        <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>Super Flexible</li>
+                                        <li className="mb-3"><i className="eva eva-checkmark-outline mr-2 text-warning"></i>Analytic Reporting</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div data-aos="fade-up" className="col-md-3 mb-4">
+                        <div className="o-hidden text-left">
+                            <div className="">
+                                <h4 className="card-title font-weight-bold">Useful Links</h4>
+                                <div className="mb-5 lead">
+                                    <ul className="list-inline">
+                                        <li className="mb-3"> <a href="landing.v2.html#">Become a Refferal</a></li>
+                                        <li className="mb-3"><a href="landing.v2.html#">Privacy Policy</a></li>
+                                        <li className="mb-3"> <a href="landing.v2.html#"> Terms and Conditions</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div data-aos="fade-up" className="col-md-3 mb-lg-0 mb-md-0">
                         <div className="o-hidden text-left">
                             <div className="">
                                 <h4 className="card-title font-weight-bold">Contact Info</h4>
                                 <div className="address-wrap mb-3">
                                     <ul className="list-group list-unstyled">
-                                        <li className=""> <i className="eva eva-pin-outline mr-2"></i>UI-Lib ,United Kingdom</li>
+                                        <li className=""> <i className="eva eva-pin-outline mr-2"></i>42, Mende Street, Maryland</li>
                                     </ul>
                                 </div>
                                 <div className="address-wrap mb-3">
                                     <ul className="list-group list-unstyled">
-                                        <li className=""><i className="eva eva-email-outline mr-2"></i>test@yahoo.com</li>
+                                        <li className=""><i className="eva eva-email-outline mr-2"></i>hubitcms@gmail.com</li>
                                     </ul>
                                 </div>
                                 <div className="address-wrap mb-3">
                                     <ul className="list-group list-unstyled">
-                                        <li className=""><i className="eva eva-phone-call-outline mr-2"></i>+8801961081993</li>
+                                        <li className=""><i className="eva eva-phone-call-outline mr-2"></i>+2347065304335</li>
                                     </ul>
                                 </div>
                                 {/* <section className="social-wrap">
@@ -703,6 +704,172 @@ function LandingLayout({handleChange, handleCategory, onSubmit, error, message, 
                 </div>
             </div>
         </section>
+        <div className="modal fade" id="pricingForm" tabIndex="-1" role="dialog" aria-labelledby="pricingForm" aria-hidden="true">
+            <div className="modal-dialog" role="document">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title" id="verifyModalContent_title">Sign Up for {plan} Plan</h5>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div className="modal-body">
+                        <form>
+                            <p>Fill the form below to kick start your registration. All fields are required.</p>
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label htmlFor="recipient-name-2" className="col-form-label">First Name:</label>
+                                        <input 
+                                            type="text" 
+                                            className="form-control" 
+                                            value={firstname}
+                                            onChange={(e) => {setFirstname(e.target.value)}}
+                                            aria-invalid={validFname ? false : true}
+                                            aria-describedby='fnameErr'
+                                            onFocus={() => setFnameFocus(true)}
+                                            onBlur={() => {setFnameFocus(false)}}
+                                        />
+                                    </div>
+                                    <div id="fnameErr" className={fnameFocus && !validFname ? "feedback-invalid" : "offscreen"}>
+                                        First Name is required
+                                    </div>
+                                </div> 
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label htmlFor="recipient-name-2" className="col-form-label">Last Name:</label>
+                                        <input 
+                                            type="text" 
+                                            className="form-control" 
+                                            value={lastname}
+                                            onChange={(e) => {setLastname(e.target.value)}}
+                                            aria-invalid={validLname? false : true}
+                                            aria-describedby='lnameErr'
+                                            onFocus={() => setLnameFocus(true)}
+                                            onBlur={() => {setLnameFocus(false)}}
+                                        />
+                                    </div>
+                                    <div id="lnameErr" className={lnameFocus && !validFname ? "feedback-invalid" : "offscreen"}>
+                                        Last Name is required
+                                    </div>
+                                </div> 
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label htmlFor="email" className="col-form-label">Email:</label>
+                                        <input 
+                                            type="text" 
+                                            className="form-control"
+                                            autoComplete='off'
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            aria-invalid={validEmail ? false : true}
+                                            aria-describedby='emailError'
+                                            onFocus={() => setEmailFocus(true)}
+                                            onBlur={() => setEmailFocus(false)}
+                                        />
+                                    </div>
+                                    <div id="emailError" className={emailFocus && !validEmail ? "feedback-invalid" : "offscreen"}>
+                                        must be a valid email.
+                                    </div>
+                                </div> 
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label htmlFor="recipient-name-2" className="col-form-label">Phone Number:</label>
+                                        <input 
+                                            type="text" 
+                                            className="form-control" 
+                                            autoComplete='off'
+                                            value={phone}
+                                            onChange={(e) => setPhone(e.target.value)}
+                                            aria-invalid={validPhone ? false : true}
+                                            aria-describedby='phoneError'
+                                            onFocus={() => setPhoneFocus(true)}
+                                            onBlur={() => setPhoneFocus(false)}
+                                        />
+                                    </div>
+                                    <div id="phoneError" className={phoneFocus && !validPhone ? "feedback-invalid" : "offscreen"}>
+                                        only numbers are allowed.
+                                    </div>
+                                </div> 
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label htmlFor="company" className="col-form-label">Company Name:</label>
+                                        <input 
+                                            type="text" 
+                                            className="form-control"
+                                            autoComplete='off'
+                                            value={company}
+                                            onChange={(e) => setCompany(e.target.value)}
+                                            aria-invalid={compFocus ? false : true}
+                                            aria-describedby='compErr'
+                                            onFocus={() => setCompFocus(true)}
+                                            onBlur={() => setCompFocus(false)}
+                                        />
+                                    </div>
+                                    <div id="compErr" className={compFocus && !validComp ? "feedback-invalid" : "offscreen"}>
+                                        company Name is required.
+                                    </div>
+                                </div> 
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label htmlFor="plan" className="col-form-label">Plan:</label>
+                                        <input 
+                                            type="text" 
+                                            className="form-control"
+                                            value={plan}
+                                            disabled
+                                        />
+                                    </div>
+                                </div> 
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label htmlFor="password" className="col-form-label">Password:</label>
+                                        <input 
+                                            type="password" 
+                                            className="form-control" 
+                                            value={pwd}
+                                            onChange={(e) => setPwd(e.target.value)}
+                                            aria-invalid={validPwd ? false : true}
+                                            aria-describedby='pwdErr'
+                                            onFocus={() => setPwdFocus(true)}
+                                            onBlur={() => setPwdFocus(false)}
+                                        />
+                                    </div>
+                                    <div id="pwdErr" className={pwdFocus && !validPwd ? "feedback-invalid" : "offscreen"}>
+                                        must be atleast 8 characters.<br /> must include uppcase and lowercase letters, number and special character.
+                                    </div>
+                                </div> 
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <label htmlFor="password-2" className="col-form-label">Confirm Password:</label>
+                                        <input 
+                                            type="password" 
+                                            className="form-control" 
+                                            value={pwd2}
+                                            onChange={(e) => setPwd2(e.target.value)}
+                                            aria-invalid={validPwd2 ? false : true}
+                                            aria-describedby='pwd2Err'
+                                            onFocus={() => setPwd2Focus(true)}
+                                            onBlur={() => setPwd2Focus(false)}
+                                        />
+                                    </div>
+                                    <div id="pwd2Err" className={pwd2Focus && !validPwd2 ? "feedback-invalid" : "offscreen"}>
+                                        passwords must be a match
+                                    </div>
+                                </div> 
+                            </div>                                  
+                        </form>
+                    </div>
+                    <div className="modal-footer" style={{"display":"flex", "alignItems":"baseline", "flexDirection":"row-reverse", "alignContent":"stretch", "justifyContent":"flex-end","flexWrap":"wrap"}}>
+                        {/* <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button> */}
+                        {(success || err )&& <div className={ success ? "alert alert-success ml-2" : "alert alert-danger ml-2"}  role="alert" style={{"fontSize":"0.813rem", "padding":"0.375rem 0.75rem","borderRadius":"0.25rem", "float":"right"}}>{msg}
+                            <button className="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>}
+                        <button type="submit" disabled={!validFname || !validLname || !validEmail || !validPhone || !validComp || !validPwd ? true : false} className="btn btn-primary" onClick={handlePriceForm}>{priceBtn}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>   
     
     

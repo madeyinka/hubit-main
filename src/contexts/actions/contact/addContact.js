@@ -15,7 +15,7 @@ export const submit = (formData) => (dispatch) => {
  .catch(err => {
      dispatch({
          type:ADD_CONTACT_ERROR,
-         payload: err.response ? err.response.data : "CONNECTION ERROR"
+         payload: err.response ? err.response : "CONNECTION ERROR"
      })
  })
 }

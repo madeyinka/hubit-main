@@ -65,3 +65,22 @@
   border-color: green;
   outline: 0;
 }
+
+.feedback-invalid {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color:#f44336;
+}
+
+.feedback-valid {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #4caf50;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px
+}
