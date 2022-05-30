@@ -26,8 +26,9 @@ function LandingComponent() {
 
   useEffect(() => {
     if (services.length === 0) {
-      axiosInstance().get('/service/pull?sortby=createdAt&orderby=desc&client_id='+process.env.REACT_APP_CLIENT_ID)
+      axiosInstance().get('service/all-services?sortby=createdAt&orderby=desc&client_id='+process.env.REACT_APP_CLIENT_ID)
       .then(res => {
+        console.log(res.data)
         if (!res.data.error){
           setServices(res.data.response)
         }
