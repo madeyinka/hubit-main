@@ -101,7 +101,7 @@ function LandingLayout({handleChange, handleCategory, onSubmit, status, message,
                         <h2 className="font-weight-bold">Our Services</h2>
                         <p>We offer a range of digital services all tailored  to meet your brand objectives.</p>
                     </div>
-                            {services.map((item, index) => (
+                            {services?.map((item, index) => (
                                <div className="col-md-6 col-lg-4 mt-4 mb-4" key={index}>
                                    <div className="card service-three--hover o-hidden">
                                         <div className="card-header p-0">
